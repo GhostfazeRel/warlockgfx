@@ -49,6 +49,19 @@ img { max-width: 100%; display: block; }
   outline-offset: 4px;
 }
 
+/* =====================================================
+   SCROLL PROGRESS
+   ===================================================== */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--ember-soft), var(--gold-soft));
+  z-index: 200;
+  transition: width 0.12s ease-out;
+}
+
 .chapter-mark {
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -88,7 +101,17 @@ img { max-width: 100%; display: block; }
   padding: 1.5rem var(--edge);
   background: linear-gradient(to bottom, rgba(10,10,13,0.85), transparent);
   backdrop-filter: blur(2px);
+  transition: background 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
+  border-bottom: 1px solid transparent;
 }
+
+.nav.is-scrolled {
+  background: rgba(10,10,13,0.88);
+  backdrop-filter: blur(10px);
+  border-bottom-color: rgba(169,135,63,0.16);
+}
+
+.nav__links { list-style: none; }
 
 .nav__mark {
   font-family: var(--font-display);
@@ -303,6 +326,7 @@ img { max-width: 100%; display: block; }
 
 .art-tile {
   --fallback: linear-gradient(155deg, var(--ink-elevated) 0%, var(--violet) 130%);
+  display: block;
   position: relative;
   grid-row: span 2;
   border-radius: 2px;
@@ -549,6 +573,23 @@ img { max-width: 100%; display: block; }
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
+/* Curtain-wipe reveal for spotlight artwork */
+.reveal-wipe {
+  clip-path: inset(0 100% 0 0);
+  transform: scale(1.08);
+  transition: clip-path 1s cubic-bezier(.22,1,.36,1), transform 1.1s cubic-bezier(.22,1,.36,1);
+}
+.spotlight__item--reverse .reveal-wipe { clip-path: inset(0 0 0 100%); }
+.reveal-wipe.is-visible { clip-path: inset(0 0 0 0); transform: scale(1); }
+
+/* Staggered gallery reveal — nth-based fallback delay if inline delay isn't set */
+.art-grid .reveal:nth-child(1) { transition-delay: 0ms; }
+.art-grid .reveal:nth-child(2) { transition-delay: 70ms; }
+.art-grid .reveal:nth-child(3) { transition-delay: 140ms; }
+.art-grid .reveal:nth-child(4) { transition-delay: 210ms; }
+.art-grid .reveal:nth-child(5) { transition-delay: 280ms; }
+.art-grid .reveal:nth-child(6) { transition-delay: 350ms; }
+
 /* =====================================================
    RESPONSIVE
    ===================================================== */
@@ -596,4 +637,7 @@ img { max-width: 100%; display: block; }
   .sigil-svg, .hero__scroll svg { animation: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .art-tile, .art-tile__overlay { transition: none; }
+  .reveal-wipe { clip-path: inset(0 0 0 0); transform: none; transition: none; }
+  .art-grid .reveal { transition-delay: 0ms; }
+  .scroll-progress { display: none; }
 }

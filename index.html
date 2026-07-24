@@ -14,8 +14,16 @@
 <body>
 
 <!-- ================= NAV ================= -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
 <header class="nav" id="nav">
   <a href="#top" class="nav__mark">WARLOCK</a>
+  <ul class="nav__links" id="navLinks">
+    <li><a href="#work">Gallery</a></li>
+    <li><a href="#spotlight">Spotlight</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
   <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -66,7 +74,7 @@
 
 <section class="spotlight" id="spotlight">
   <div class="section-head">
-    <p class="chapter-mark">I— Spotlight</p>
+    <p class="chapter-mark">I — Spotlight</p>
     <h2 class="section-title">Featured Pieces</h2>
   </div>
 
@@ -76,14 +84,16 @@
       <div class="spotlight__text">
         <span class="art-tile__tag">Personal Work</span>
         <h3>The Lord</h3>
+        <p>A fallen king enthroned in fire and chain, sword still crackling with the last of his lightning.</p>
       </div>
     </article>
 
     <article class="spotlight__item spotlight__item--reverse">
-      <div class="spotlight__image" style="--art-img:url('images/image.jpg')"><span class="art-tile__num">II</span></div>
+      <div class="spotlight__image" style="--art-img:url('images/BLACKROCK_EDIT.jpg')"><span class="art-tile__num">II</span></div>
       <div class="spotlight__text">
         <span class="art-tile__tag">Personal Work</span>
-        <h3>The Knight</h3>
+        <h3>Blackrock Corporation</h3>
+        <p>A checkerboard hallway, a red exit sign, and something with too many legs standing under it.</p>
       </div>
     </article>
 
@@ -92,14 +102,73 @@
       <div class="spotlight__text">
         <span class="art-tile__tag">Personal Work</span>
         <h3>The Wizard</h3>
+        <p>A lone staff-bearer at the edge of the trees, castle lights glowing through the fog ahead.</p>
       </div>
     </article>
   </div>
 </section>
 
+<!-- ================= GALLERY ================= -->
+<section class="gallery" id="work">
+  <div class="section-head">
+    <p class="chapter-mark">II — Gallery</p>
+    <h2 class="section-title">Full Collection</h2>
+  </div>
+
+  <div class="art-grid">
+    <a class="art-tile span-tall" href="images/warlock.png" target="_blank" rel="noopener" style="--art-img:url('images/warlock.jpg')">
+      <span class="art-tile__num">01</span>
+      <div class="art-tile__overlay">
+        <span class="art-tile__tag">Personal Work</span>
+        <span class="art-tile__title">The Wizard</span>
+      </div>
+    </a>
+
+    <a class="art-tile" href="images/PORSCHE_EDIT.png" target="_blank" rel="noopener" style="--art-img:url('images/PORSCHE_EDIT.jpg')">
+      <span class="art-tile__num">02</span>
+      <div class="art-tile__overlay">
+        <span class="art-tile__tag">Personal Work</span>
+        <span class="art-tile__title">Porsche 918 Spyder</span>
+      </div>
+    </a>
+
+    <a class="art-tile span-wide" href="images/BLACKROCK_EDIT.png" target="_blank" rel="noopener" style="--art-img:url('images/BLACKROCK_EDIT.jpg')">
+      <span class="art-tile__num">03</span>
+      <div class="art-tile__overlay">
+        <span class="art-tile__tag">Personal Work</span>
+        <span class="art-tile__title">Blackrock Corporation</span>
+      </div>
+    </a>
+
+    <a class="art-tile" href="images/HALO_EDIT2.png" target="_blank" rel="noopener" style="--art-img:url('images/HALO_EDIT2.jpg')">
+      <span class="art-tile__num">04</span>
+      <div class="art-tile__overlay">
+        <span class="art-tile__tag">Personal Work</span>
+        <span class="art-tile__title">Mjolnir Accension</span>
+      </div>
+    </a>
+
+    <a class="art-tile span-tall" href="images/KNIGHT_PNG.png" target="_blank" rel="noopener" style="--art-img:url('images/KNIGHT_PNG.jpg')">
+      <span class="art-tile__num">05</span>
+      <div class="art-tile__overlay">
+        <span class="art-tile__tag">Personal Work</span>
+        <span class="art-tile__title">The Lord</span>
+      </div>
+    </a>
+
+    <a class="art-tile span-wide" href="images/DINOSAUR_EDIT.png" target="_blank" rel="noopener" style="--art-img:url('images/DINOSAUR_EDIT.jpg')">
+      <span class="art-tile__num">06</span>
+      <div class="art-tile__overlay">
+        <span class="art-tile__tag">Personal Work</span>
+        <span class="art-tile__title">Evolution's Masterpiece</span>
+      </div>
+    </a>
+  </div>
+</section>
+
 <section class="skills" id="skills">                  
   <div class="section-head">
-    <p class="chapter-mark">II — Craft</p>
+    <p class="chapter-mark">III — Craft</p>
     <h2 class="section-title">Tools &amp; Skills</h2>
   </div>
   <ul class="skills__list">
@@ -118,7 +187,7 @@
       <polygon points="200,80 305,265 95,265" class="sigil-tri"/>
     </svg>
   </div>
-  <p class="chapter-mark">III — Correspondence</p>
+  <p class="chapter-mark">IV — Correspondence</p>
   <h2 class="section-title">Commission a Piece</h2>
   <p class="contact__sub">Slots open on a rolling basis. Send a note with your idea, references, and a rough timeline.</p>
   <a class="contact__email">Contact on discord - ghostfaze</a>
