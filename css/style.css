@@ -412,13 +412,20 @@ img { max-width: 100%; display: block; }
 /* =====================================================
    SPOTLIGHT
    ===================================================== */
-.spotlight { padding: 6rem 0 7rem; border-top: 1px solid rgba(169,135,63,0.18); }
-.spotlight .section-head { margin-bottom: 3.5rem; }
+.spotlight {
+  padding: 6rem 0 7rem;
+  border-top: 1px solid rgba(169,135,63,0.18);
+}
+
+.spotlight .section-head {
+  margin-bottom: 3.5rem;
+}
 
 .spotlight__list {
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 var(--edge);
+
   display: flex;
   flex-direction: column;
   gap: 5rem;
@@ -431,35 +438,27 @@ img { max-width: 100%; display: block; }
   align-items: center;
 }
 
-.spotlight__item--reverse .spotlight__image { order: 2; }
-.spotlight__item--reverse .spotlight__text { order: 1; }
+.spotlight__item--reverse .spotlight__image {
+  order: 2;
+}
+
+.spotlight__item--reverse .spotlight__text {
+  order: 1;
+}
 
 .spotlight__image {
   --fallback: linear-gradient(155deg, var(--ink-elevated) 0%, var(--ember) 150%);
+
   position: relative;
   aspect-ratio: 4 / 3;
+
   background-image: var(--art-img), var(--fallback);
   background-size: cover;
   background-position: center;
+
   border-radius: 2px;
   border: 1px solid rgba(237,231,216,0.08);
 }
-
-.spotlight__image .art-tile__num {
-  font-family: var(--font-display);
-  font-size: 1.4rem;
-  color: var(--gold-soft);
-  opacity: 0.8;
-}
-
-.spotlight__text h3 {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  color: var(--bone);
-  margin: 0.6rem 0 0.8rem;
-}
-
-.spotlight__text p { color: var(--bone-dim); max-width: 48ch; }
 
 /* =====================================================
    REMOVE SPOTLIGHT REVEAL WIPE
