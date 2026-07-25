@@ -422,6 +422,18 @@ img { max-width: 100%; display: block; }
   margin-bottom: 3.5rem;
 }
 
+.spotlight__text h3 {
+  font-family: var(--font-display);
+  color: var(--bone);
+  font-size: 1.8rem;
+  margin-bottom: .8rem;
+}
+
+.spotlight__text p {
+  color: var(--bone-dim);
+  max-width: 45ch;
+}
+
 .spotlight__list {
   max-width: var(--container);
   margin: 0 auto;
