@@ -311,6 +311,8 @@ img { max-width: 100%; display: block; }
   transition: transform .35s ease;
 }
 
+
+
 /* remove old masonry */
 .art-tile.span-wide,
 .art-tile.span-tall {
@@ -405,7 +407,6 @@ img { max-width: 100%; display: block; }
 .art-tile__title {
   font-family: var(--font-display);
   font-size: 1rem;
-
   color: var(--bone);
 }
 
