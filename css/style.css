@@ -326,17 +326,17 @@ img { max-width: 100%; display: block; }
   padding: 0 var(--edge);
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
 .art-tile {
   --fallback: linear-gradient(155deg, var(--ink-elevated) 0%, var(--violet) 130%);
 
-  position: relative;
   display: block;
+  position: relative;
 
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 16 / 9;
 
   border-radius: 6px;
   overflow: hidden;
@@ -347,10 +347,13 @@ img { max-width: 100%; display: block; }
   background-size: cover;
   background-position: center;
 
-  transition:
-    transform .35s ease,
-    box-shadow .35s ease;
+  transition: transform .35s ease;
 }
+
+.art-tile.span-wide,
+.art-tile.span-tall {
+  grid-column: auto;
+  grid-row: auto;
 
 .art-tile::before {
   content: "";
