@@ -31,9 +31,6 @@ document.querySelectorAll('.art-grid .art-tile').forEach((tile, i) => {
   tile.style.transitionDelay = `${i * 70}ms`;
 });
 
-const wipeTargets = document.querySelectorAll('.spotlight__image');
-wipeTargets.forEach(el => el.classList.add('reveal-wipe'));
-
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
