@@ -47,7 +47,6 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 
 revealTargets.forEach(el => revealObserver.observe(el));
-wipeTargets.forEach(el => revealObserver.observe(el));
 
 // ---------------------------------------------------------
 // Scroll progress bar
