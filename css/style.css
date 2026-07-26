@@ -463,10 +463,11 @@ img { max-width: 100%; display: block; }
   --fallback: linear-gradient(155deg, var(--ink-elevated) 0%, var(--ember) 150%);
 
   position: relative;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 3;
 
   background-image: var(--art-img), var(--fallback);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
 
   border-radius: 2px;
